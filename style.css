@@ -1,0 +1,174 @@
+/* Importer une police Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Style général */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #cbdae0; 
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    width: 70%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius:10px; /* Coins arrondis */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);/* Ombre pour donner de la profondeur */
+
+}
+
+/* Section de gauche (profil et contact) */
+.left-section {
+    width:30%;
+    background-color: #e0f7fa;
+    padding: 20px;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+}
+
+.left-section:hover {
+    background-color: #b2ebf2;
+}
+
+/* Style pour l'image de profil */
+.profile img {
+    border-radius: 70%;
+    width:200px; 
+    box-shadow: 0 4px 20px rgba(47, 17, 181, 0.2); /* Ombre pour donner de la profondeur */
+    transition: transform 0.2s, filter 0.3s; /* Transition pour les effets */
+}
+
+.profile img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+    filter: brightness(1.1); /* Augmente la luminosité au survol */
+}
+
+.profile h2 {
+    margin: 10px 0;
+    font-size: 26px;
+    font-weight: 800;
+    color: #199183;
+}
+.bot{
+    border-radius:50%;
+    color: #3a9ba0;
+}
+
+.profile h3 {
+    color: #757575;
+    font-style: italic;
+}
+
+.profil-description h2,
+.information h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #1b7f93;
+}
+
+.information p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight:600;
+}
+.button{
+    margin-bottom: 15px;
+    color: #089aaa;
+    font-size: medium;
+    font-family: fantasy;
+}
+
+/*(formation et vie sociale) */
+.right-section {
+    width: 70%;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #00575b;
+    border-bottom: 2px solid #b2ebf2;
+    padding-bottom: 5px;
+}
+
+/* Section d'activités préférées */
+#activites-preferes {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section des certifications */
+#certifications {
+    margin-top: 20px;
+}
+
+.certification-list {
+    display: flex;
+   
+}
+
+.certification {
+    width: 30%; /* Ajuste cette valeur pour la taille des certifications */
+    margin: 10px 0;
+    text-align: center;
+}
+
+.certification-img {
+    width: 100%; /* S'assurer que l'image s'adapte */
+    height: auto;
+    max-height: 150px; /* Limite la hauteur */
+    object-fit: contain; /* Conserver les proportions */
+}
+
+.social-media {
+    margin-top: 40px;
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+
+/* Styles pour les listes */
+.club-list,
+.sport-list,
+.art-list {
+    margin: 5px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    font-size: large;
+}
+
+.club-list li,
+.sport-list li,
+.art-list li {
+    margin: 5px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    font-size: large;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;/* Change l'orientation des éléments en colonne */
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        border-right: none; /* Retire la bordure sur les petits écrans */
+    }
+
+    .certification {
+        width: 100%; /* Chaque certification prend toute la largeur sur petits écrans */
+    }
+}
